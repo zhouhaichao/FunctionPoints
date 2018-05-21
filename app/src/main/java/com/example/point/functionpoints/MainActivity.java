@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.point.functionpoints.picasso.PicassoActivity;
 import com.example.point.functionpoints.retrofit_rxjava_okhttp.DoubanMovieActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.BTN_doubanMovie).setOnClickListener(this);
+        findViewById(R.id.BTN_picasso).setOnClickListener(this);
     }
 
     @Override
@@ -24,6 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.BTN_doubanMovie:
                 intent = new Intent(MainActivity.this, DoubanMovieActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.BTN_picasso:
+                intent = new Intent(MainActivity.this, PicassoActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -24,6 +24,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".okhttp.OkhttpActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".picasso.PicassoActivity"
+            android:screenOrientation="portrait"/>
 
 
     </application>

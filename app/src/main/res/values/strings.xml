@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FunctionPoints</string>
     <string name="douban_movie">豆瓣电影</string>
+    <string name="picasso">Picasso</string>
 </resources>
