@@ -32,6 +32,27 @@
             android:id="@+id/BTN_picasso"
             android:text="@string/picasso"/>
 
+        <com.example.point.functionpoints.view.RoundView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/black"
+            app:ring_width="5dp"
+            android:id="@+id/RV_test"
+            app:ring_color="@color/white"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BTN_changeColor"
+            android:text="改变颜色"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BTN_list_tree"
+            android:text="树形列表"/>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

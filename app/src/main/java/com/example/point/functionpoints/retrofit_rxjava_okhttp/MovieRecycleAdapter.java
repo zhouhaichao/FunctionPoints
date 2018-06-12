@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.point.functionpoints.R;
@@ -21,12 +20,21 @@ import java.util.List;
 public class MovieRecycleAdapter extends RecyclerView.Adapter<MovieRecycleAdapter.ViewHolder> {
 
     private Context context;
-    private List<Subject> list;
+    private List<Movie> list;
 
 
-    public MovieRecycleAdapter( Context context, List<Subject> list)
+    public MovieRecycleAdapter( Context context)
     {
         this.context = context;
+    }
+
+    public MovieRecycleAdapter( Context context, List<Movie> list)
+    {
+        this.context = context;
+        this.list = list;
+    }
+
+    public void setList(List<Movie> list) {
         this.list = list;
     }
 

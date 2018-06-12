@@ -4,7 +4,7 @@ package com.example.point.functionpoints.retrofit_rxjava_okhttp;
  * Created by 42822 on 2018/5/20.
  */
 
-public class Subject {
+public class Movie {
     private String title;
     private String original_title;
     private String year;
@@ -44,7 +44,7 @@ public class Subject {
 
     @Override
     public String toString() {
-        return "Subject{" +
+        return "Movie{" +
                 "title='" + title + '\'' +
                 ", original_title='" + original_title + '\'' +
                 ", year='" + year + '\'' +

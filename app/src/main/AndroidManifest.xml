@@ -26,6 +26,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".picasso.PicassoActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ListTreeActivity"
+            android:screenOrientation="portrait"/>
 
 
     </application>

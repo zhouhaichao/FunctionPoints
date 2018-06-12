@@ -11,7 +11,7 @@ public class MovieSubject {
     private int start;
     private int total;
 
-    private List<Subject> subjects;
+    private List<Movie> subjects;
 
     private String title;
 
@@ -39,11 +39,11 @@ public class MovieSubject {
         this.total = total;
     }
 
-    public List<Subject> getSubjects() {
+    public List<Movie> getSubjects() {
         return subjects;
     }
 
-    public void setSubjects(List<Subject> subjects) {
+    public void setSubjects(List<Movie> subjects) {
         this.subjects = subjects;
     }
 
