@@ -19,7 +19,6 @@ public class HttpCommonInterceptor implements Interceptor {
     private Map<String,String> mHeaderParamsMap = new HashMap<>();
 
 
-
     @Override
     public Response intercept(Chain chain) throws IOException {
 

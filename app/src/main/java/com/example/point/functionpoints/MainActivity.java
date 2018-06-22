@@ -1,7 +1,7 @@
 package com.example.point.functionpoints;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -10,7 +10,7 @@ import com.example.point.functionpoints.picasso.PicassoActivity;
 import com.example.point.functionpoints.retrofit_rxjava_okhttp.DoubanMovieActivity;
 import com.example.point.functionpoints.view.RoundView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends Activity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.BTN_picasso).setOnClickListener(this);
         findViewById(R.id.BTN_changeColor).setOnClickListener(this);
         findViewById(R.id.BTN_list_tree).setOnClickListener(this);
+        findViewById(R.id.tv_kuangjia).setOnClickListener(this);
+        findViewById(R.id.tv_shitu).setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.BTN_list_tree:
                 intent = new Intent(MainActivity.this, ListTreeActivity.class);
                 startActivity(intent);
+            case R.id.tv_kuangjia:
+                break;
+
+            case R.id.tv_shitu:
+                break;
 
         }
     }

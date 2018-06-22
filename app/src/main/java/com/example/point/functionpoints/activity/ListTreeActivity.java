@@ -101,7 +101,6 @@ public class ListTreeActivity extends Activity {
 
     }
 
-
     public void initView(){
         lv_tree = findViewById(R.id.lv_tree);
 
@@ -109,7 +108,5 @@ public class ListTreeActivity extends Activity {
 
         lv_tree.setAdapter(treeAdapter);
     }
-
-
 
 }

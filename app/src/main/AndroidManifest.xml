@@ -28,6 +28,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.ListTreeActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.KuangJiaActivity"
+            android:screenOrientation="portrait"/>
 
 
     </application>
