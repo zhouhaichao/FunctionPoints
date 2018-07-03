@@ -2,8 +2,19 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff3b30</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="gray">#b3b3b3</color>
+    <color name="line">#e7e9ea</color>
+    <color name="textTitle">#404c55</color>
+    <color name="bg_gary1">#f3f3f3</color>
+    <color name="cyan">#9ad0dc</color>
+
+    <color name="base">#4997d1</color>
+    
+    
+    <color name="select">#4997d1</color>
+    <color name="no_select">#c9c9c9</color>
+
 </resources>

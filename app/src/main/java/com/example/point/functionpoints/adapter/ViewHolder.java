@@ -18,16 +18,9 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     public ViewHolder(View itemView){
         super(itemView);
+        this.mConvertView = itemView;
+        this.mViews = new SparseArray<>();
     }
-
-   /* private ViewHolder(Context context, ViewGroup parent, int layoutId) {
-
-        this.mViews = new SparseArray<View>();
-        mConvertView = LayoutInflater.from(context).inflate(layoutId,parent,false);
-        mConvertView.setTag(this);
-    }*/
-
-
 
     public <T extends View> T getView(int viewId) {
         View view = mViews.get(viewId);

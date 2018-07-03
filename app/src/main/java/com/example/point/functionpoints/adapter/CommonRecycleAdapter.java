@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.point.functionpoints.R;
-
 import java.util.List;
 
 /**
@@ -22,7 +20,6 @@ public abstract class CommonRecycleAdapter<T>  extends RecyclerView.Adapter<View
 
     public CommonRecycleAdapter(Context context, List<T> mDatas, int itemLayoutId)
     {
-//        mInflater = LayoutInflater.from(context);
         this.mContext = context;
         this.mDatas = mDatas;
         this.mItemLayoutId = itemLayoutId;
@@ -36,7 +33,7 @@ public abstract class CommonRecycleAdapter<T>  extends RecyclerView.Adapter<View
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v  = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movie_info,parent,false);
+        View v  = LayoutInflater.from(parent.getContext()).inflate(mItemLayoutId,parent,false);
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;
     }

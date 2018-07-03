@@ -15,7 +15,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -29,6 +28,10 @@
         <activity android:name=".activity.ListTreeActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.KuangJiaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ShiTuActivity"
+            android:screenOrientation="portrait"/>
+         <activity android:name=".activity.shitu.SelectContactsActivity"
             android:screenOrientation="portrait"/>
 
 

@@ -6,11 +6,21 @@ package com.example.point.functionpoints.retrofit_rxjava_okhttp;
 
 public class BaseResponse<T> {
 
+
+    /*//规范模式
     public int  status;
     public String message;
     public T data;
     public boolean isSuccess()
     {
         return 200 == status;
+    }*/
+
+    //针对豆瓣电影网的返回数据设置
+
+    public T subjects;
+    public boolean isSuccess()
+    {
+        return true;
     }
 }
