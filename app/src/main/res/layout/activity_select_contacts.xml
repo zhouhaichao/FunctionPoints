@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/textTitle"
+            android:text="人员选择-SelectContactsActivity"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/ll_sort"
+        android:background="@color/bg_gary1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/tv_contacts"
+                    android:layout_weight="1"
+                    android:text="按人员显示"
+                    android:textColor="@color/base"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="2dp"
+                    android:id="@+id/tv_line1"
+                    android:background="@color/base"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/tv_organization"
+                    android:layout_weight="1"
+                    android:text="按组织架构显示"
+                    android:textColor="@color/base"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="2dp"
+                    android:id="@+id/tv_line2"
+                    android:background="@color/base"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/vp_show_contacts">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gary1"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/lv_contact"
+            android:divider="@null">
+        </ListView>
+
+        <com.example.point.functionpoints.view.QuickLocationBar
+            android:id="@+id/qlb_word"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|right"/>
+
+
+        <TextView
+            android:id="@+id/tv_word"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="50sp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textColor="@color/base"/>
+
+    </FrameLayout>
+</LinearLayout>
