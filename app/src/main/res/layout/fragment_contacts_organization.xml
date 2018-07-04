@@ -7,10 +7,10 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:background="@color/bg_gary1"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:id="@+id/lv_contact"
         android:divider="@null">
     </ListView>
+
 </LinearLayout>

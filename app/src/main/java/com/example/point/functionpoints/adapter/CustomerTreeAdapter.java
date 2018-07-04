@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.point.functionpoints.R;
 import com.example.point.functionpoints.model.DeptPersonnelTree;
+import com.example.point.functionpoints.util.RandomImage;
 
 import java.util.ArrayList;
 
@@ -65,6 +66,7 @@ public class CustomerTreeAdapter extends TreeViewAdapter {
                     setChecked(node,!node.ischeck);
                 }
             });
+            cusHolder.iv_head.setImageResource(RandomImage.getFruitImage());
             //x.image().bind(cusHolder.iv_head, node.photosUrls, new ImageOptions.Builder().setCircular(true).setFailureDrawableId(R.drawable.ic_common_protrait).build());
         }
         else//组织结构节点

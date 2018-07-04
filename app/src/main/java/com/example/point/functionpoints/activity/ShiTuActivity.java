@@ -9,11 +9,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.point.functionpoints.R;
+import com.example.point.functionpoints.activity.shitu.PersonalCenterActivity;
 import com.example.point.functionpoints.activity.shitu.SelectContactsActivity;
 import com.example.point.functionpoints.adapter.CommonRecycleAdapter;
 import com.example.point.functionpoints.adapter.ViewHolder;
 import com.example.point.functionpoints.model.ClassInfo;
-import com.example.point.functionpoints.picasso.PicassoActivity;
 import com.example.point.functionpoints.view.RecycleViewDivider;
 import com.githang.statusbar.StatusBarCompat;
 
@@ -50,8 +50,8 @@ public class ShiTuActivity extends Activity{
     public void initdata()
     {
         strlist = new ArrayList<>();
-        strlist.add(new ClassInfo("部门人员数","利用retrofit Rxjava Okhttp框架", SelectContactsActivity.class));
-        strlist.add(new ClassInfo("PICASSO","利用picasso图片框架", PicassoActivity.class));
+        strlist.add(new ClassInfo("部门人员选择","首字母排序结构选择，树形结构选择", SelectContactsActivity.class));
+        strlist.add(new ClassInfo("个人中心","条目排版--LineShowCommonView", PersonalCenterActivity.class));
 
 
         commonRecycleAdapter = new CommonRecycleAdapter<ClassInfo>(this,strlist,R.layout.item_kuangjia_info) {

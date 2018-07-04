@@ -9,4 +9,26 @@
         <!--圆环颜色-->
         <attr name="ring_color" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="LineShowCommonView">
+        <attr name="line_background" format="color"/>
+        <!--<attr name="line_background" format="color"/>-->
+        <attr name="line_height" />
+        <attr name="icon_src" />
+        <attr name="icon_show"/>
+        <attr name="title_size" />
+        <attr name="title_color" />
+        <attr name="title_text" />
+        <attr name="content_size"/>
+        <attr name="content_color"/>
+        <attr name="content_text"/>
+        <attr name="content_hinttext"/>
+        <attr name="content_hintcolor"/>
+        <attr name="arrow_src"/>
+        <attr name="arrow_show"/>
+        <attr name="lineundericon_background" />
+        <attr name="lineunderinfo_background" />
+        <attr name="lineundericon_show" />
+        <attr name="lineunderinfo_show" />
+    </declare-styleable>
 </resources>

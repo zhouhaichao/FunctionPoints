@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.point.functionpoints.R;
 import com.example.point.functionpoints.model.DeptPersonnelTree;
+import com.example.point.functionpoints.util.RandomImage;
 
 import java.util.List;
 
@@ -95,6 +96,7 @@ public class CustomerSortAdapter extends BaseAdapter {
             }
         });
 
+        holder.iv_head.setImageResource(RandomImage.getFruitImage());
         //x.image().bind(holder.iv_head, children.get(position).photosUrls, new ImageOptions.Builder().setCircular(true).setFailureDrawableId(R.drawable.ic_common_protrait).build());
 
         return  view;

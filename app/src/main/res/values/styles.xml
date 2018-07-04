@@ -18,4 +18,29 @@
         <item name="android:gravity">center</item>
     </style>
 
+
+    <style name="CommonView">
+        <item name ="line_background">@color/white</item>
+    </style>
+
+    <!--常用行 编辑型 mine页面-->
+    <style name="CommonView.ShowLine.mine">
+        <item name ="icon_show">true</item>
+        <item name ="title_size">14sp</item>
+        <item name ="title_color">@color/textTitle</item>
+        <item name ="content_size">14sp</item>
+        <item name ="content_color">@color/textTitle</item>
+        <item name="arrow_show">true</item>
+        <item name ="arrow_src">@drawable/ic_delivery_insert</item>
+    </style>
+
+    <style name="CommonView.ShowLine">
+        <item name ="content_hintcolor">@color/textHint</item>
+        <!--<item name="content_editenable">true</item>-->
+        <item name ="lineundericon_background">@color/line</item>
+        <item name ="lineunderinfo_background">@color/line</item>
+        <item name ="lineundericon_show">false</item>
+        <item name ="lineunderinfo_show">true</item>
+    </style>
+
 </resources>

@@ -10,6 +10,7 @@
     <color name="textTitle">#404c55</color>
     <color name="bg_gary1">#f3f3f3</color>
     <color name="cyan">#9ad0dc</color>
+    <color name="textHint">#aaaaaa</color>
 
     <color name="base">#4997d1</color>
     

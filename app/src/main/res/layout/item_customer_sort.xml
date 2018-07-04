@@ -8,12 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:id="@+id/tv_initial"
-        android:textColor="@color/bg_gary1"
+        android:textColor="@color/base"
         android:paddingLeft="20dp"
         android:gravity="center_vertical"
         android:textSize="18sp"
         android:text="A"
-        android:background="@color/cyan"/>
+        android:background="@color/bg_gary1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/iv_head"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/ic_fruit_2"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
@@ -64,7 +64,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.1dp"
+        android:layout_height="0.5dp"
         android:layout_marginLeft="60dp"
         android:background="@color/line"/>
 </LinearLayout>
