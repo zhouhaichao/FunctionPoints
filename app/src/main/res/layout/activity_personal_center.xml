@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_gradient_blue">
+        <ImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_portrait"/>
+
+        <LinearLayout
+            android:id="@+id/ll_myinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_portrait"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="九哥"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_postname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.point.functionpoints.view.LineShowCommonView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:title_text="我的草莓"
+                style="@style/CommonView.ShowLine.mine"
+                app:line_background="@color/white"
+                app:icon_src="@drawable/ic_fruit_1"/>
+            <com.example.point.functionpoints.view.LineShowCommonView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:title_text="胡萝卜概况"
+                style="@style/CommonView.ShowLine.mine"
+                app:line_background="@color/white"
+                app:icon_src="@drawable/ic_fruit_3"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/bg_gary1"/>
+            <com.example.point.functionpoints.view.LineShowCommonView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:title_text="不是鸭梨是鳄梨"
+                style="@style/CommonView.ShowLine.mine"
+                app:line_background="@color/white"
+                app:icon_src="@drawable/ic_fruit_4"/>
+            <com.example.point.functionpoints.view.LineShowCommonView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:title_text="进击的芒果"
+                style="@style/CommonView.ShowLine.mine"
+                app:line_background="@color/white"
+                app:icon_src="@drawable/ic_fruit_6"/>
+            <com.example.point.functionpoints.view.LineShowCommonView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:title_text="苹果的美化处理"
+                style="@style/CommonView.ShowLine.mine"
+                app:line_background="@color/white"
+                app:icon_src="@drawable/ic_fruit_8"/>
+            <com.example.point.functionpoints.view.LineShowCommonView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:title_text="吃葡萄不吐葡萄皮"
+                style="@style/CommonView.ShowLine.mine"
+                app:line_background="@color/white"
+                app:icon_src="@drawable/ic_fruit_9"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/line"/>
+            <com.example.point.functionpoints.view.LineShowCommonView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:title_text="西瓜的设置"
+                style="@style/CommonView.ShowLine.mine"
+                app:line_background="@color/white"
+                app:icon_src="@drawable/ic_fruit_10"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
