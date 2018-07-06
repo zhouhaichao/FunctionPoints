@@ -35,6 +35,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.shitu.PersonalCenterActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.shitu.DialogUIActivity"
+            android:screenOrientation="portrait"/>
 
 
     </application>

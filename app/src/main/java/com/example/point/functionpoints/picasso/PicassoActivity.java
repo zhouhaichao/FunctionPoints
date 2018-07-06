@@ -1,6 +1,5 @@
 package com.example.point.functionpoints.picasso;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -8,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.point.functionpoints.R;
+import com.example.point.functionpoints.activity.TitleActivity;
 import com.squareup.picasso.OkHttpDownloader;
 
 import java.io.File;
@@ -16,7 +16,7 @@ import java.io.File;
  * Created by 42822 on 2018/5/21.
  */
 
-public class PicassoActivity extends Activity implements View.OnClickListener{
+public class PicassoActivity extends TitleActivity implements View.OnClickListener{
 
     private ImageView imageView;
     private String url = "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg";
@@ -27,6 +27,8 @@ public class PicassoActivity extends Activity implements View.OnClickListener{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picasso);
+
+        setTitleText("Picassso--毕加索");
 
         imageView = (ImageView) findViewById(R.id.picassoView);
         findViewById(R.id.loadImage).setOnClickListener(this);

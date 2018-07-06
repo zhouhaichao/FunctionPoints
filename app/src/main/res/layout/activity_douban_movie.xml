@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:gravity="center_vertical"
@@ -18,7 +18,9 @@
             android:layout_centerHorizontal="true"
             android:textSize="18sp"/>
 
-    </RelativeLayout>
+    </RelativeLayout>-->
+
+    <include layout="@layout/view_layout_head"/>
 
     <TextView
         android:layout_width="match_parent"

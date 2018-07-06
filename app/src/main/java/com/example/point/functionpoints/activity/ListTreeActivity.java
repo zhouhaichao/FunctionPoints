@@ -28,7 +28,6 @@ public class ListTreeActivity extends Activity {
         setContentView(R.layout.activity_list_tree);
 
         initData();
-
         initView();
     }
 

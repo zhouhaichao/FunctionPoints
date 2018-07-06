@@ -6,6 +6,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
+    <include layout="@layout/view_layout_head"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

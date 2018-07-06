@@ -1,6 +1,5 @@
 package com.example.point.functionpoints.retrofit_rxjava_okhttp;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,24 +7,18 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.example.point.functionpoints.R;
+import com.example.point.functionpoints.activity.TitleActivity;
 
 import java.util.List;
 
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
-import rx.Observer;
-import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
-import rx.schedulers.Schedulers;
 
 
 /**
  * Created by 42822 on 2018/5/20.
  */
 
-public class DoubanMovieActivity extends Activity {
+public class DoubanMovieActivity extends TitleActivity {
 
     public static final String BASE_URL = "https://api.douban.com/v2/movie/";
 
@@ -40,6 +33,8 @@ public class DoubanMovieActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_douban_movie);
+
+        setTitleText("豆瓣电影");
         swipe_target = findViewById(R.id.swipe_target);
 
         layoutManager = new LinearLayoutManager(this);
