@@ -11,6 +11,7 @@ import android.view.View;
 import com.example.point.functionpoints.R;
 import com.example.point.functionpoints.activity.shitu.DialogUIActivity;
 import com.example.point.functionpoints.activity.shitu.PersonalCenterActivity;
+import com.example.point.functionpoints.activity.shitu.RecycleWithSwipeActivity;
 import com.example.point.functionpoints.activity.shitu.SelectContactsActivity;
 import com.example.point.functionpoints.adapter.CommonRecycleAdapter;
 import com.example.point.functionpoints.adapter.ViewHolder;
@@ -54,6 +55,7 @@ public class ShiTuActivity extends Activity{
         strlist.add(new ClassInfo("部门人员选择","首字母排序结构选择，树形结构选择", SelectContactsActivity.class));
         strlist.add(new ClassInfo("个人中心","条目排版--LineShowCommonView", PersonalCenterActivity.class));
         strlist.add(new ClassInfo("弹框样式","Dialog", DialogUIActivity.class));
+        strlist.add(new ClassInfo("侧滑--刷新列表","侧滑刷新列表--RecycleWithSwipeActivity", RecycleWithSwipeActivity.class));
 
 
         commonRecycleAdapter = new CommonRecycleAdapter<ClassInfo>(this,strlist,R.layout.item_kuangjia_info) {

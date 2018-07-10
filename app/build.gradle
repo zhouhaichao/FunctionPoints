@@ -45,7 +45,12 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.squareup.okhttp:okhttp:2.6.0'
+
+    //列表下拉刷新，上拉加载控件
+    compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
     //顶部状态栏背景颜色设置
     compile 'com.githang:status-bar-compat:latest.integration'
     implementation project(':jjdxm-dialogui')
+
+
 }
