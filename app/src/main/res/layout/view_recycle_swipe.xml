@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aspsine.swipetoloadlayout.SwipeToLoadLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeToLoadLayout">
+
+    <com.example.point.functionpoints.view.CustomRefreshHeadView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/textTitle"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:id="@+id/swipe_refresh_header"/>
+
+    <com.example.point.functionpoints.view.SwipeRecycleView
+        android:id="@+id/swipe_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </com.example.point.functionpoints.view.SwipeRecycleView>
+
+    <com.example.point.functionpoints.view.CustomLoadMoreView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/swipe_load_more_footer"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/textTitle"/>
+
+
+
+</com.aspsine.swipetoloadlayout.SwipeToLoadLayout>

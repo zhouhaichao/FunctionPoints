@@ -1,11 +1,9 @@
 package com.example.point.functionpoints.activity.shitu;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 
 import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
@@ -70,7 +68,6 @@ public class RecycleWithSwipeActivity extends TitleActivity  implements OnRefres
 
         swipe_target.setLayoutManager(layoutManager);
         swipe_target.setSlideListener(this);
-
         swipe_target.addItemDecoration(new RecycleViewDivider(this, LinearLayoutManager.VERTICAL, 10, 0));
     }
 

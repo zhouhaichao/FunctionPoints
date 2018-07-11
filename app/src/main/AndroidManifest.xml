@@ -39,6 +39,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.shitu.RecycleWithSwipeActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.shitu.PackRecycleWithSwipeActivity"
+            android:screenOrientation="portrait"/>
 
 
     </application>

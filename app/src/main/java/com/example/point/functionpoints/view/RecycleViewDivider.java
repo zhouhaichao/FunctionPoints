@@ -11,6 +11,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.example.point.functionpoints.util.DensityUtil;
+
 /**
  * Created by bobo on 2018/6/29.
  */
@@ -63,12 +65,11 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
      */
     public RecycleViewDivider(Context context, int orientation, int dividerHeight, int dividerColor) {
         this(context, orientation);
-        mDividerHeight = dividerHeight;
+        mDividerHeight = DensityUtil.dip2px(context,dividerHeight);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(dividerColor);
         mPaint.setStyle(Paint.Style.FILL);
     }
-
 
     //获取分割线尺寸
     @Override

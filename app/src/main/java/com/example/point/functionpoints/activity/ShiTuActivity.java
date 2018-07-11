@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.example.point.functionpoints.R;
 import com.example.point.functionpoints.activity.shitu.DialogUIActivity;
+import com.example.point.functionpoints.activity.shitu.PackRecycleWithSwipeActivity;
 import com.example.point.functionpoints.activity.shitu.PersonalCenterActivity;
 import com.example.point.functionpoints.activity.shitu.RecycleWithSwipeActivity;
 import com.example.point.functionpoints.activity.shitu.SelectContactsActivity;
@@ -56,6 +57,7 @@ public class ShiTuActivity extends Activity{
         strlist.add(new ClassInfo("个人中心","条目排版--LineShowCommonView", PersonalCenterActivity.class));
         strlist.add(new ClassInfo("弹框样式","Dialog", DialogUIActivity.class));
         strlist.add(new ClassInfo("侧滑--刷新列表","侧滑刷新列表--RecycleWithSwipeActivity", RecycleWithSwipeActivity.class));
+        strlist.add(new ClassInfo("封装--侧滑--刷新列表","封装的侧滑刷新列表--PackRecycleWithSwipeActivity", PackRecycleWithSwipeActivity.class));
 
 
         commonRecycleAdapter = new CommonRecycleAdapter<ClassInfo>(this,strlist,R.layout.item_kuangjia_info) {

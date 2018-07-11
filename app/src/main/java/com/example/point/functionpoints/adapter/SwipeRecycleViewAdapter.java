@@ -1,14 +1,11 @@
 package com.example.point.functionpoints.adapter;
 
-import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,7 +47,6 @@ public class SwipeRecycleViewAdapter extends RecyclerView.Adapter<SwipeRecycleVi
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.tv_content.setText("正文"+position);
-
         holder.tv_content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
