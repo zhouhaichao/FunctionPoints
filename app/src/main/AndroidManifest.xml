@@ -31,7 +31,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.ShiTuActivity"
             android:screenOrientation="portrait"/>
-         <activity android:name=".activity.shitu.SelectContactsActivity"
+        <activity android:name=".activity.shitu.SelectContactsActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.shitu.PersonalCenterActivity"
             android:screenOrientation="portrait"/>
@@ -40,6 +40,8 @@
         <activity android:name=".activity.shitu.RecycleWithSwipeActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.shitu.PackRecycleWithSwipeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.shitu.WeekCalendarActivity"
             android:screenOrientation="portrait"/>
 
 
