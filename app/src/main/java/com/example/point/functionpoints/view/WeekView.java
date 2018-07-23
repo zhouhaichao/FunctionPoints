@@ -4,39 +4,92 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.example.point.functionpoints.model.DateInfo;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created by HaiChao on 2018/7/13.
  */
 
-public class WeekView extends ViewGroup {
+public class WeekView extends ViewGroup implements View.OnClickListener{
 
     private static final String TAG = "WeekView";
+    private ArrayList<DateInfo> datelist;
+    private Calendar calendar;
+    private DateInfo selectDate;
+
+    private ItemClick itemClick;
+
+    public WeekView(Context context) {
+        this(context,null);
+    }
 
     public WeekView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
+    }
+
+    public WeekView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
         initData();
     }
 
+public  void setItemClick(ItemClick itemClick)
+{
+    this.itemClick = itemClick;
+}
+
     public void  initData()
     {
-
-
+        datelist = new ArrayList<>();
+        selectDate = new DateInfo();
+        printWeekdays();
     }
 
     private  void printWeekdays() {
-        ArrayList<Date> week = new ArrayList<>();
-        Calendar calendar = Calendar.getInstance();
+        calendar = Calendar.getInstance();
+        selectDate.month = calendar.get(Calendar.MONTH)+1;
+        selectDate.day = calendar.get(Calendar.DAY_OF_MONTH);
         setToFirstDay(calendar);
         for (int i = 0; i < 7; i++) {
+            DateInfo dateInfo = new DateInfo();
+            dateInfo.month = calendar.get(Calendar.MONTH)+1;
+            dateInfo.day = calendar.get(Calendar.DAY_OF_MONTH);
+            datelist.add(dateInfo);
             calendar.add(Calendar.DATE, 1);
-            Date d = calendar.getTime();
         }
     }
+
+    public void getNextWeek()
+    {
+        datelist.clear();
+        for (int i = 0; i < 7; i++) {
+            DateInfo dateInfo = new DateInfo();
+            dateInfo.month = calendar.get(Calendar.MONTH)+1;
+            dateInfo.day = calendar.get(Calendar.DAY_OF_MONTH);
+            datelist.add(dateInfo);
+            calendar.add(Calendar.DATE, 1);
+        }
+        refreshView();
+    }
+
+    public void getLastWeek()
+    {
+        datelist.clear();
+        calendar.add(Calendar.DATE, -14);
+        for (int i = 0; i < 7; i++) {
+            DateInfo dateInfo = new DateInfo();
+            dateInfo.month = calendar.get(Calendar.MONTH)+1;
+            dateInfo.day = calendar.get(Calendar.DAY_OF_MONTH);
+            datelist.add(dateInfo);
+            calendar.add(Calendar.DATE, 1);
+        }
+        refreshView();
+    }
+
 
     private  void setToFirstDay(Calendar calendar) {
         while (calendar.get(Calendar.DAY_OF_WEEK) != Calendar.MONDAY) {
@@ -69,6 +122,14 @@ public class WeekView extends ViewGroup {
         }
     }*/
 
+   public void refreshView()
+   {
+       int cnt = getChildCount();
+       for(int i = 0; i < cnt; i++) {
+           View child = getChildAt(i);
+           ((TextView)child).setText(datelist.get(i).month+""+datelist.get(i).day);
+       }
+   }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -110,9 +171,7 @@ public class WeekView extends ViewGroup {
             );
 
         }
-
         setMeasuredDimension(widthSize, getLayoutParams().height >= 0 ? getLayoutParams().height : baseSize + getPaddingBottom() + getPaddingTop());
-
     }
 
     @Override
@@ -124,8 +183,11 @@ public class WeekView extends ViewGroup {
         int part = width / cnt;
 
         for(int i = 0; i < cnt; i++) {
-
             View child = getChildAt(i);
+            child.setTag(i);
+            child.setOnClickListener(this);
+
+            ((TextView)child).setText(datelist.get(i).month+""+datelist.get(i).day);
             if(child.getVisibility() == View.GONE) {
                 continue;
             }
@@ -137,5 +199,24 @@ public class WeekView extends ViewGroup {
 
         }
 
+    }
+
+    @Override
+    public void onClick(View view) {
+       int positon = (int) view.getTag();
+       if(positon<datelist.size())
+       {
+           selectDate.month = datelist.get(positon).month;
+           selectDate.day = datelist.get(positon).day;
+           if(itemClick!=null)
+           {
+               itemClick.click(positon,selectDate);
+           }
+       }
+    }
+
+    public  interface  ItemClick
+    {
+        void click(int position, DateInfo selectDate);
     }
 }

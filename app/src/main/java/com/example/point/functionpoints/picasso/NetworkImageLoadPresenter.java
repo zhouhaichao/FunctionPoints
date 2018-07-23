@@ -29,7 +29,8 @@ public class NetworkImageLoadPresenter implements INetworkImageLoadPresenter  {
     private static NetworkImageLoadPresenter customLoader;
 
     private NetworkImageLoadPresenter(Context context) {
-        this(context, null);
+        mContext = context;
+        //this(context, null);
     }
 
 
@@ -44,6 +45,9 @@ public class NetworkImageLoadPresenter implements INetworkImageLoadPresenter  {
         this.mPicassoInfo = mPicassoInfo;
         this.mSingletonPicasso = mPicassoInfo.mPicasso;
         this.cacheFile = mPicassoInfo.mCacheFile;
+
+        mSingletonPicasso.setIndicatorsEnabled(true);
+        mSingletonPicasso.setLoggingEnabled(true);
         Picasso.setSingletonInstance(mSingletonPicasso);
     }
 
@@ -144,8 +148,10 @@ public class NetworkImageLoadPresenter implements INetworkImageLoadPresenter  {
             return;
         }
         RequestCreator requestCreator = getRequestCreator(url);
-        requestCreator.networkPolicy(NetworkPolicy.NO_CACHE, NetworkPolicy.NO_STORE).transform(
-                new CircleTransform()).error(mContext.getResources().getDrawable(R.mipmap.ic_launcher))
+        requestCreator
+                .networkPolicy(NetworkPolicy.NO_CACHE, NetworkPolicy.NO_STORE)
+                .transform(new CircleTransform())
+                .error(mContext.getResources().getDrawable(R.mipmap.ic_launcher))
                 .into(iv);
     }
 

@@ -11,16 +11,21 @@
         android:id="@+id/picassoView"
         android:layout_width="150dp"
         android:layout_height="220dp"
-        android:scaleType="fitXY"
+        android:scaleType="centerInside"
         android:background="@android:color/darker_gray"
         />
+
+    <TextView
+        android:id="@+id/tv_size"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="@style/TextViewTitle"/>
 
     <Button
         android:id="@+id/loadImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="加载图片"
-        />
+        android:text="加载图片"/>
 
     <Button
         android:id="@+id/cleanCurrent"

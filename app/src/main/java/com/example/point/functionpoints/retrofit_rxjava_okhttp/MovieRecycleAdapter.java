@@ -51,6 +51,7 @@ public class MovieRecycleAdapter extends RecyclerView.Adapter<MovieRecycleAdapte
         holder.TV_title.setText(list.get(position).getTitle());
         holder.TV_originalName.setText(list.get(position).getOriginal_title());
         holder.TV_year.setText(list.get(position).getYear());
+        //NetworkImageLoadPresenter.create(context).loadCircleImage(holder.IMV_image,list.get(position).getImages().getSmall());
         Picasso.with(context)
                 .load(list.get(position).getImages().getSmall())
                 .into(holder.IMV_image);
