@@ -51,6 +51,13 @@ public class SwipeListLayout  extends FrameLayout {
         }
     }
 
+    public boolean isOpen(){
+        if(status==Status.Open)
+            return true;
+        else
+            return false;
+    }
+
     public void setOnSwipeStatusListener(OnSwipeStatusListener listener) {
         this.listener = listener;
     }

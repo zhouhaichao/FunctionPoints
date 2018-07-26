@@ -13,6 +13,7 @@ import com.example.point.functionpoints.activity.shitu.DialogUIActivity;
 import com.example.point.functionpoints.activity.shitu.PackRecycleWithSwipeActivity;
 import com.example.point.functionpoints.activity.shitu.PersonalCenterActivity;
 import com.example.point.functionpoints.activity.shitu.RecycleWithSwipeActivity;
+import com.example.point.functionpoints.activity.shitu.RecycleWithSwipeDragActivity;
 import com.example.point.functionpoints.activity.shitu.SelectContactsActivity;
 import com.example.point.functionpoints.activity.shitu.WeekCalendarActivity;
 import com.example.point.functionpoints.adapter.CommonRecycleAdapter;
@@ -59,7 +60,9 @@ public class ShiTuActivity extends Activity{
         strlist.add(new ClassInfo("弹框样式","Dialog", DialogUIActivity.class));
         strlist.add(new ClassInfo("侧滑--刷新列表","侧滑刷新列表--RecycleWithSwipeActivity", RecycleWithSwipeActivity.class));
         strlist.add(new ClassInfo("封装--侧滑--刷新列表","封装的侧滑刷新列表--PackRecycleWithSwipeActivity", PackRecycleWithSwipeActivity.class));
+        strlist.add(new ClassInfo("可 上下右拖拽--左侧滑列表","可向上 向下移动，向右滑动删除，向左侧滑展示隐藏布局", RecycleWithSwipeDragActivity.class));
         strlist.add(new ClassInfo("周历","WeekCalendarActivity", WeekCalendarActivity.class));
+
 
 
         commonRecycleAdapter = new CommonRecycleAdapter<ClassInfo>(this,strlist,R.layout.item_kuangjia_info) {

@@ -46,7 +46,7 @@ public class SwipeRecycleViewAdapter extends RecyclerView.Adapter<SwipeRecycleVi
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        holder.tv_content.setText("正文"+position);
+        holder.tv_content.setText(list.get(position));
         holder.tv_content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
