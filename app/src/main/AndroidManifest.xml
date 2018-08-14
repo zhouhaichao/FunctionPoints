@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
     <application
         android:allowBackup="true"
@@ -28,24 +30,35 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.ListTreeActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.KuangJiaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.ShiTuActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.shitu.SelectContactsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.shitu.PersonalCenterActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.shitu.DialogUIActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.shitu.RecycleWithSwipeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.shitu.PackRecycleWithSwipeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.shitu.WeekCalendarActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.shitu.RecycleWithSwipeDragActivity"
-            android:screenOrientation="portrait"/>
+
+        <!--框架-->
+            <activity android:name=".activity.KuangJiaActivity"
+                android:screenOrientation="portrait"/>
+            <activity android:name=".activity.kuangjia.FilePickActivity"
+                android:screenOrientation="portrait"/>
+        <!--框架-->
+
+
+
+        <!--视图-->
+            <activity android:name=".activity.ShiTuActivity"
+                android:screenOrientation="portrait"/>
+            <activity android:name=".activity.shitu.SelectContactsActivity"
+                android:screenOrientation="portrait"/>
+            <activity android:name=".activity.shitu.PersonalCenterActivity"
+                android:screenOrientation="portrait"/>
+            <activity android:name=".activity.shitu.DialogUIActivity"
+                android:screenOrientation="portrait"/>
+            <activity android:name=".activity.shitu.RecycleWithSwipeActivity"
+                android:screenOrientation="portrait"/>
+            <activity android:name=".activity.shitu.PackRecycleWithSwipeActivity"
+                android:screenOrientation="portrait"/>
+            <activity android:name=".activity.shitu.WeekCalendarActivity"
+                android:screenOrientation="portrait"/>
+            <activity android:name=".activity.shitu.RecycleWithSwipeDragActivity"
+                android:screenOrientation="portrait"/>
+        <!--视图-->
+
 
 
     </application>

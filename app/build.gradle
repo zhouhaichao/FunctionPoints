@@ -51,6 +51,7 @@ dependencies {
     //顶部状态栏背景颜色设置
     compile 'com.githang:status-bar-compat:latest.integration'
     implementation project(':jjdxm-dialogui')
-
+    //本地文件选择框架
+    compile 'com.leon:lfilepickerlibrary:1.8.0'
 
 }

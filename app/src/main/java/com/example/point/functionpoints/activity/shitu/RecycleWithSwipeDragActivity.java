@@ -75,7 +75,6 @@ public class RecycleWithSwipeDragActivity extends TitleActivity implements OnRef
         swipe_target.setSlideListener(this);
         swipe_target.addItemDecoration(new RecycleViewDivider(this, LinearLayoutManager.VERTICAL, 10, 0));
 
-
     }
 
     public void initData()

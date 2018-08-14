@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.point.functionpoints.R;
+import com.example.point.functionpoints.activity.kuangjia.FilePickActivity;
 import com.example.point.functionpoints.adapter.CommonRecycleAdapter;
 import com.example.point.functionpoints.adapter.ViewHolder;
 import com.example.point.functionpoints.model.ClassInfo;
@@ -53,6 +54,7 @@ public class KuangJiaActivity extends Activity {
         strlist = new ArrayList<>();
         strlist.add(new ClassInfo("豆瓣电影","利用retrofit Rxjava Okhttp框架", DoubanMovieActivity.class));
         strlist.add(new ClassInfo("PICASSO","利用picasso图片框架", PicassoActivity.class));
+        strlist.add(new ClassInfo("本地文件选择","选择本地文件，设置各种样式", FilePickActivity.class));
 
 
         commonRecycleAdapter = new CommonRecycleAdapter<ClassInfo>(this,strlist,R.layout.item_kuangjia_info) {
