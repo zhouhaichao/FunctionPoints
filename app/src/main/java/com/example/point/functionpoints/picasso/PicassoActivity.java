@@ -20,7 +20,7 @@ import java.io.File;
 public class PicassoActivity extends TitleActivity implements View.OnClickListener{
 
     private ImageView imageView;
-    private String url = "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg";
+    private String url = "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1606727862.jpg";
 
     private TextView tv_size;
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/view_layout_head" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="调用单例 返回会造成内存泄漏
+
+        返回后10s左右回出现内存泄露报告
+
+       " />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text=" 在使用了BraodcastReceiver，ContentObserver，File,Cursor，Stream，Bitmap等资源后，
+        当Activity销毁时，要及时关闭这些资源，避免不必要的内存泄漏。" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1. 使用UUID为监控对象创建一个唯一的key值，并将key放入Set集合中。
+
+2. 创建一个监控对象的弱引用，并开启线程进行内存分析。
+
+3 手动触发GC，利用弱引用被回收会被放入引用队列的机制，将引用队列里的被回收对象出列，并从Set集合中移除对应的key值。
+
+4 如果Set集合中监控对象的key值没有被移除，说明监控对象没有被放入引用队列，即没有被回收，发生了内存泄漏。" />
+
+</LinearLayout>

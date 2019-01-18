@@ -8,12 +8,10 @@ import com.example.point.functionpoints.R;
 
 public class RandomImage {
 
-    public static int getFruitImage()
-    {
+    public static int getFruitImage() {
         int imageRes = R.drawable.ic_fruit_1;
 
-        switch ((int)(Math.random()*10))
-        {
+        switch ((int) (Math.random() * 10)) {
             case 1:
                 imageRes = R.drawable.ic_fruit_1;
                 break;
@@ -49,4 +47,54 @@ public class RandomImage {
         return imageRes;
     }
 
+    public static int getGradientBG() {
+        int randomRes = R.drawable.bg_radius10_gradient2;
+
+        switch ((int) (Math.random() * 6)) {
+            case 1:
+                randomRes = R.drawable.bg_radius10_gradient1;
+                break;
+            case 2:
+                randomRes = R.drawable.bg_radius10_gradient2;
+                break;
+            case 3:
+                randomRes = R.drawable.bg_radius10_gradient3;
+                break;
+            case 4:
+                randomRes = R.drawable.bg_radius10_gradient4;
+                break;
+            case 5:
+                randomRes = R.drawable.bg_radius10_gradient5;
+                break;
+            case 0:
+                randomRes = R.drawable.bg_radius10_gradient6;
+                break;
+        }
+        return randomRes;
+    }
+    public static int getGradientBG(int num) {
+        int randomRes = R.drawable.bg_radius10_gradient2;
+
+        switch ((num%6)) {
+            case 1:
+                randomRes = R.drawable.bg_radius10_gradient1;
+                break;
+            case 2:
+                randomRes = R.drawable.bg_radius10_gradient2;
+                break;
+            case 3:
+                randomRes = R.drawable.bg_radius10_gradient3;
+                break;
+            case 4:
+                randomRes = R.drawable.bg_radius10_gradient4;
+                break;
+            case 5:
+                randomRes = R.drawable.bg_radius10_gradient5;
+                break;
+            case 0:
+                randomRes = R.drawable.bg_radius10_gradient6;
+                break;
+        }
+        return randomRes;
+    }
 }

@@ -88,7 +88,6 @@ public class NetworkImageLoadPresenter implements INetworkImageLoadPresenter  {
         return customLoader;
     }
 
-
     @Override
     public void loadImage(@NonNull ImageView iv, String url) {
         if (TextUtils.isEmpty(url)) {
@@ -154,7 +153,6 @@ public class NetworkImageLoadPresenter implements INetworkImageLoadPresenter  {
                 .error(mContext.getResources().getDrawable(R.mipmap.ic_launcher))
                 .into(iv);
     }
-
 
     @Override
     public RequestCreator getRequestCreator(String url) {

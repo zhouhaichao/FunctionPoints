@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/line"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@color/line"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_design"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.design.widget.TabLayout>
+
+    <com.example.point.functionpoints.view.tablayout.ExTabLayout
+        android:id="@+id/tab_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.example.point.functionpoints.view.tablayout.ExTabLayout
+        android:id="@+id/tab_my"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:exTabBackground="@drawable/item_background_holo_light"
+        app:exTabIndicatorPadding="4dp"
+        app:exTabIndicatorWidth="24dp"
+        app:exTabIndicatorStretch="1"
+        app:exTabSelectedTextSize="16sp"
+        app:exTabTextSize="14sp">
+
+    </com.example.point.functionpoints.view.tablayout.ExTabLayout>
+
+    <com.example.point.functionpoints.view.tablayout.ExTabLayout
+        android:id="@+id/tab_my3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base"
+        app:exTabIndicatorDrawable="@color/white"
+        app:exTabIndicatorGravity="center"
+        app:exTabIndicatorHeight="equalToTab"
+        app:exTabIndicatorWidth="equalToTab"
+        app:exTabSelectedTextColor="@color/orange"
+        app:exTabSelectedTextSize="16sp"
+        app:exTabIndicatorStretch="1"
+        app:exTabTextSize="14sp">
+
+    </com.example.point.functionpoints.view.tablayout.ExTabLayout>
+
+    <com.example.point.functionpoints.view.tablayout.ExTabLayout
+        android:id="@+id/tab_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        app:exTabIndicatorDrawable="@drawable/bg_radius"
+        app:exTabIndicatorGravity="center"
+        app:exTabIndicatorHeight="24dp"
+        app:exTabIndicatorStretch="0.8"
+        app:exTabIndicatorWidth="equalToCustom"
+        app:exTabSelectedTextColor="@color/base"
+        app:exTabSelectedTextSize="16sp"
+        app:exTabTextSize="14sp">
+
+    </com.example.point.functionpoints.view.tablayout.ExTabLayout>
+
+    <com.example.point.functionpoints.view.tablayout.ExTabLayout
+        android:id="@+id/tab_my2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:exTabIndicatorGravity="top"
+        app:exTabIndicatorHeight="4dp"
+        app:exTabIndicatorPadding="2dp"
+        app:exTabIndicatorStretch="1"
+        app:exTabSelectedTextSize="16sp"
+        app:exTabTextSize="14sp">
+
+    </com.example.point.functionpoints.view.tablayout.ExTabLayout>
+
+    <com.example.point.functionpoints.view.tablayout.TabLayout
+        android:id="@+id/tab_custom2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.point.functionpoints.view.tablayout.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

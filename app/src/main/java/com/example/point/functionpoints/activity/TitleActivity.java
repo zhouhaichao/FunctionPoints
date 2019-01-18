@@ -1,12 +1,16 @@
 package com.example.point.functionpoints.activity;
 
 import android.app.Activity;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.point.functionpoints.MyApplication;
 import com.example.point.functionpoints.R;
+import com.squareup.leakcanary.RefWatcher;
 
 /**
  * Created by bobo on 2018/7/6.
@@ -30,14 +34,21 @@ public class TitleActivity extends Activity {
             ll_right = findViewById(R.id.ll_right);
             ll_left = findViewById(R.id.ll_left);
 
-
             ll_left.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     finish();
                 }
             });
+
         }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        RefWatcher refWatcher = MyApplication.getRefWatcher(this);
+        refWatcher.watch(this);
+    }
 
     protected TitleActivity setTitleText(String title)
     {

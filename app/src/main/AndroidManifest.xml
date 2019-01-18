@@ -33,6 +33,7 @@
 
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -200,9 +201,6 @@
             android:value="bc5fa7fbca89163f881e431a" />-->
         <!-- </>值来自开发者平台取得的AppKey -->
 
-
-
-
         <activity android:name=".retrofit_rxjava_okhttp.DoubanMovieActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".okhttp.OkhttpActivity"
@@ -212,32 +210,60 @@
         <activity android:name=".activity.ListTreeActivity"
             android:screenOrientation="portrait"/>
 
-        <!--框架-->
-            <activity android:name=".activity.KuangJiaActivity"
-                android:screenOrientation="portrait"/>
-            <activity android:name=".activity.kuangjia.FilePickActivity"
-                android:screenOrientation="portrait"/>
+        <!--共用Common-->
+        <activity android:name=".activity.common.CommonWebActivity"
+            android:screenOrientation="portrait"/>
+        <!--共用Common-->
+
+
         <!--框架-->
 
+        <activity
+            android:name=".activity.KuangJiaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.kuangjia.FilePickActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.kuangjia.LeakCanaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.kuangjia.PtShiPeiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.kuangjia.ButterKnifeActivity"
+            android:screenOrientation="portrait" />
+        <!--框架-->
 
 
         <!--视图-->
-            <activity android:name=".activity.ShiTuActivity"
-                android:screenOrientation="portrait"/>
-            <activity android:name=".activity.shitu.SelectContactsActivity"
-                android:screenOrientation="portrait"/>
-            <activity android:name=".activity.shitu.PersonalCenterActivity"
-                android:screenOrientation="portrait"/>
-            <activity android:name=".activity.shitu.DialogUIActivity"
-                android:screenOrientation="portrait"/>
-            <activity android:name=".activity.shitu.RecycleWithSwipeActivity"
-                android:screenOrientation="portrait"/>
-            <activity android:name=".activity.shitu.PackRecycleWithSwipeActivity"
-                android:screenOrientation="portrait"/>
-            <activity android:name=".activity.shitu.WeekCalendarActivity"
-                android:screenOrientation="portrait"/>
-            <activity android:name=".activity.shitu.RecycleWithSwipeDragActivity"
-                android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ShiTuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.SelectContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.PersonalCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.DialogUIActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.RecycleWithSwipeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.PackRecycleWithSwipeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.WeekCalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.RecycleWithSwipeDragActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.TablayoutStyleActivity"
+            android:screenOrientation="portrait" />
         <!--视图-->
 
 

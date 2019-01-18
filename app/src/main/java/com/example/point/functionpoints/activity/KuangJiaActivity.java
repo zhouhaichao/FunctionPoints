@@ -9,7 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.point.functionpoints.R;
+import com.example.point.functionpoints.activity.kuangjia.ButterKnifeActivity;
 import com.example.point.functionpoints.activity.kuangjia.FilePickActivity;
+import com.example.point.functionpoints.activity.kuangjia.LeakCanaryActivity;
+import com.example.point.functionpoints.activity.kuangjia.PtShiPeiActivity;
 import com.example.point.functionpoints.adapter.CommonRecycleAdapter;
 import com.example.point.functionpoints.adapter.ViewHolder;
 import com.example.point.functionpoints.model.ClassInfo;
@@ -55,6 +58,9 @@ public class KuangJiaActivity extends Activity {
         strlist.add(new ClassInfo("豆瓣电影","利用retrofit Rxjava Okhttp框架", DoubanMovieActivity.class));
         strlist.add(new ClassInfo("PICASSO","利用picasso图片框架", PicassoActivity.class));
         strlist.add(new ClassInfo("本地文件选择","选择本地文件，设置各种样式", FilePickActivity.class));
+        strlist.add(new ClassInfo("LeakCanary框架","内存优化，针对内存泄漏总结，内存泄露的根本原因：长生命周期的对象持有短生命周期的对象。短周期对象就无法及时释放。", LeakCanaryActivity.class));
+        strlist.add(new ClassInfo("Butterknife黄油刀","ButterKnife是一个专注于Android系统的View注入框架,以前总是要写很多findViewById来找到View对象，有了ButterKnife可以很轻松的省去这些步骤。", ButterKnifeActivity.class));
+        strlist.add(new ClassInfo("pt适配界面","1. 无侵入性 2. 灵活性高 3. 不会影响系统 View 和三方 View 的大小 4. 不会失效", PtShiPeiActivity.class));
 
 
         commonRecycleAdapter = new CommonRecycleAdapter<ClassInfo>(this,strlist,R.layout.item_kuangjia_info) {

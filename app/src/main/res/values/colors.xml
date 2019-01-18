@@ -12,10 +12,27 @@
     <color name="cyan">#9ad0dc</color>
     <color name="textHint">#aaaaaa</color>
 
-    <color name="base">#4997d1</color>
-    
-    
-    <color name="select">#4997d1</color>
+    <color name="base">#088FFF</color>
+
+    <color name="orange">#ff6900</color>
+    <color name="select">#088FFF</color>
     <color name="no_select">#c9c9c9</color>
+
+    <color name="c_81fbb8">#81fbb8</color>
+    <color name="c_2bc76f">#2bc76f</color>
+    <color name="c_38ef7d">#38ef7d</color>
+    <color name="c_11998e">#11998e</color>
+    <color name="c_fff687">#fff687</color>
+    <color name="c_f6416c">#f6416c</color>
+    <color name="c_90f7ec">#90f7ec</color>
+    <color name="c_32ccbc">#32ccbc</color>
+    <color name="c_abdcff">#abdcff</color>
+    <color name="c_0369ff">#0369ff</color>
+    <color name="c_ce9ffc">#ce9ffc</color>
+    <color name="c_7367f0">#7367f0</color>
+    <color name="c_f8df72">#f8df72</color>
+    <color name="c_fbda41">#fbda41</color>
+    <color name="c_fdeb71">#fdeb71</color>
+    <color name="c_f8d800">#f8d800</color>
 
 </resources>
