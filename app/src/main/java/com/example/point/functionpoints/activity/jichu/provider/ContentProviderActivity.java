@@ -1,10 +1,15 @@
-package com.example.point.functionpoints.activity.kuangjia;
+package com.example.point.functionpoints.activity.jichu.provider;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -23,9 +28,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by HaiChao on 2019/1/10.
+ * Created by HaiChao on 2019/5/24.
  */
-public class ButterKnifeActivity extends TitleActivity {
+public class ContentProviderActivity extends TitleActivity {
 
     @BindView(R.id.rv_weburl)
     RecyclerView rv_weburl;
@@ -42,6 +47,8 @@ public class ButterKnifeActivity extends TitleActivity {
         ButterKnife.bind(this);
 
         initView();
+
+        initData();
     }
 
     private void initView(){
@@ -52,15 +59,11 @@ public class ButterKnifeActivity extends TitleActivity {
         rv_weburl.setLayoutManager(layoutManager);
 
         webInfoList = new ArrayList<>();
-        webInfoList.add(new WebInfo("CSDN","ButterKnife入门教程","https://blog.csdn.net/u012527802/article/details/81059568"));
-        webInfoList.add(new WebInfo("简书","Android Butterknife使用方法总结","https://www.jianshu.com/p/3678aafdabc7"));
-        webInfoList.add(new WebInfo("简书","ButterKnife,你真的了解吗？","https://www.jianshu.com/p/2967ff971177"));
-        webInfoList.add(new WebInfo("简书","编译时注解 - ButterKnife源码分析和手写","https://www.jianshu.com/p/fa29253a1579"));
-        webInfoList.add(new WebInfo("ButterKnife","AAAAAAAAAAAAAAAAAAAAAAAA","url"));
-        webInfoList.add(new WebInfo("ButterKnife","AAAAAAAAAAAAAAAAAAAAAAAA","url"));
-        webInfoList.add(new WebInfo("ButterKnife","AAAAAAAAAAAAAAAAAAAAAAAA","url"));
-        webInfoList.add(new WebInfo("ButterKnife","AAAAAAAAAAAAAAAAAAAAAAAA","url"));
-        webInfoList.add(new WebInfo("ButterKnife","AAAAAAAAAAAAAAAAAAAAAAAA","url"));
+        webInfoList.add(new WebInfo("简书","Android：关于ContentProvider的知识都在这里了","https://www.jianshu.com/p/ea8bc4aaf057"));
+//        webInfoList.add(new WebInfo("简书","Android Butterknife使用方法总结","https://www.jianshu.com/p/3678aafdabc7"));
+//        webInfoList.add(new WebInfo("简书","ButterKnife,你真的了解吗？","https://www.jianshu.com/p/2967ff971177"));
+//        webInfoList.add(new WebInfo("简书","编译时注解 - ButterKnife源码分析和手写","https://www.jianshu.com/p/fa29253a1579"));
+
 
 
         adapter = new CommonRecycleAdapter<WebInfo>(this,webInfoList,R.layout.item_common_card) {
@@ -74,7 +77,7 @@ public class ButterKnifeActivity extends TitleActivity {
                     @Override
                     public void onClick(View v) {
                         if(item.url.startsWith("http")){
-                            Intent intent = new Intent(ButterKnifeActivity.this, CommonWebActivity.class);
+                            Intent intent = new Intent(ContentProviderActivity.this, CommonWebActivity.class);
                             intent.putExtra(ConstCommon.INTENT_EXTRA_TITLE,item.title);
                             intent.putExtra(ConstCommon.INTENT_EXTRA_URL,item.url);
                             startActivity(intent);
@@ -90,4 +93,56 @@ public class ButterKnifeActivity extends TitleActivity {
         rv_weburl.setAdapter(adapter);
     }
 
+
+    private void initData(){
+        // 设置URI
+        Uri uri_user = Uri.parse("content://cn.zhou.myprovider/user");
+
+        // 插入表中数据
+        ContentValues values = new ContentValues();
+        values.put("_id", 3);
+        values.put("name", "Iverson");
+
+
+        // 获取ContentResolver
+        ContentResolver resolver =  getContentResolver();
+        // 通过ContentResolver 根据URI 向ContentProvider中插入数据
+        resolver.insert(uri_user,values);
+
+        // 通过ContentResolver 向ContentProvider中查询数据
+        Cursor cursor = resolver.query(uri_user, new String[]{"_id","name"}, null, null, null);
+        while (cursor.moveToNext()){
+            Log.d("ool","query book:" + cursor.getInt(0) +" "+ cursor.getString(1));
+
+            // 将表中数据全部输出
+        }
+        cursor.close();
+        // 关闭游标
+
+        /**
+         * 对job表进行操作
+         */
+        // 和上述类似,只是URI需要更改,从而匹配不同的URI CODE,从而找到不同的数据资源
+        Uri uri_job = Uri.parse("content://cn.zhou.myprovider/job");
+
+        // 插入表中数据
+        ContentValues values2 = new ContentValues();
+        values2.put("_id", 3);
+        values2.put("job", "NBA Player");
+
+        // 获取ContentResolver
+        ContentResolver resolver2 =  getContentResolver();
+        // 通过ContentResolver 根据URI 向ContentProvider中插入数据
+        resolver2.insert(uri_job,values2);
+
+        // 通过ContentResolver 向ContentProvider中查询数据
+        Cursor cursor2 = resolver2.query(uri_job, new String[]{"_id","job"}, null, null, null);
+        while (cursor2.moveToNext()){
+            Log.d("ool","query job:" + cursor2.getInt(0) +" "+ cursor2.getString(1));
+            // 将表中数据全部输出
+        }
+        cursor2.close();
+        // 关闭游标
+
+    }
 }

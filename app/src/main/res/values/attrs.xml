@@ -13,23 +13,23 @@
     <declare-styleable name="LineShowCommonView">
         <attr name="line_background" format="color"/>
         <!--<attr name="line_background" format="color"/>-->
-        <attr name="line_height" />
-        <attr name="icon_src" />
-        <attr name="icon_show"/>
-        <attr name="title_size" />
-        <attr name="title_color" />
-        <attr name="title_text" />
-        <attr name="content_size"/>
-        <attr name="content_color"/>
-        <attr name="content_text"/>
-        <attr name="content_hinttext"/>
-        <attr name="content_hintcolor"/>
-        <attr name="arrow_src"/>
-        <attr name="arrow_show"/>
-        <attr name="lineundericon_background" />
-        <attr name="lineunderinfo_background" />
-        <attr name="lineundericon_show" />
-        <attr name="lineunderinfo_show" />
+        <attr name="line_height" format="dimension"/>
+        <attr name="icon_src" format="reference"/>
+        <attr name="icon_show" format="boolean"/>
+        <attr name="title_size" format="dimension"/>
+        <attr name="title_color" format="color"/>
+        <attr name="title_text" format="string"/>
+        <attr name="content_size" format="dimension"/>
+        <attr name="content_color" format="color"/>
+        <attr name="content_text" format="string"/>
+        <attr name="content_hinttext" format="string"/>
+        <attr name="content_hintcolor" format="color"/>
+        <attr name="arrow_src" format="reference"/>
+        <attr name="arrow_show" format="boolean"/>
+        <attr name="lineundericon_background" format="reference"/>
+        <attr name="lineunderinfo_background" format="reference"/>
+        <attr name="lineundericon_show" format="boolean"/>
+        <attr name="lineunderinfo_show" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="ExTabLayout">

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.point.functionpoints">
 
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -31,6 +35,15 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <!--// 声明本应用 可允许通信的权限  COntentProvider-->
+    <permission android:name="scut.carson_ho.PROVIDER" android:protectionLevel="normal"/>
+    <!--// 细分读 & 写权限如下，但本Demo直接采用全权限-->
+    <!--// <permission android:name="scut.carson_ho.Write" android:protectionLevel="normal"/>-->
+    <!--// <permission android:name="scut.carson_ho.Read" android:protectionLevel="normal"/>-->
+
+
 
     <application
         android:name=".MyApplication"
@@ -39,7 +52,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="ExtraText,GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -236,6 +250,32 @@
         <!--框架-->
 
 
+        <!--基础-->
+
+        <activity
+            android:name=".activity.JiChuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.jichu.provider.ContentProviderActivity"
+            android:screenOrientation="portrait" />
+        <!--// 声明外界进程可访问该Provider的权限（读 & 写）-->
+        <!--// 权限可细分为读 & 写的权限-->
+        <!--// 外界需要声明同样的读 & 写的权限才可进行相应操作，否则会报错-->
+        <!--// android:readPermisson = "scut.carson_ho.Read"-->
+        <!--// android:writePermisson = "scut.carson_ho.Write"-->
+        <provider android:name=".activity.jichu.provider.MyProvider"
+            android:authorities="cn.zhou.myprovider"
+            android:permission="scut.carson_ho.PROVIDER"
+            android:exported="true"/> <!--// 设置此provider是否可以被其他进程使用-->
+
+
+
+
+
+
+        <!--基础-->
+
+
         <!--视图-->
         <activity
             android:name=".activity.ShiTuActivity"
@@ -263,6 +303,21 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.shitu.TablayoutStyleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shitu.SlideMenuActivity"
+            android:screenOrientation="portrait" />
+       <activity
+            android:name=".activity.shitu.barrage.SingleBarrageActivity"
+            android:screenOrientation="portrait" />
+       <activity
+            android:name=".activity.shitu.barrage.MutiBarrageActivity"
+            android:screenOrientation="landscape" />
+       <activity
+            android:name=".activity.shitu.ClockViewActivity"
+            android:screenOrientation="portrait" />
+       <activity
+            android:name=".activity.shitu.CameraActivity"
             android:screenOrientation="portrait" />
         <!--视图-->
 

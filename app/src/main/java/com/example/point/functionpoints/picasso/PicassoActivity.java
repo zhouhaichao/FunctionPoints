@@ -53,7 +53,7 @@ public class PicassoActivity extends TitleActivity implements View.OnClickListen
         //imageLoader = NetworkImageLoadPresenter.create(this);
         //自定义Picasso
         File cacheFile = new File(getExternalCacheDir(),"cache-test");
-        imageLoader = NetworkImageLoadPresenter.create(this,PicassoInfo.createPicassoInfo(this,
+        imageLoader = NetworkImageLoadPresenter.create(getApplication(),PicassoInfo.createPicassoInfo(this,
                 new OkHttpDownloader(cacheFile),cacheFile,null));
     }
 

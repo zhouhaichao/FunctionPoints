@@ -9,14 +9,19 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.point.functionpoints.R;
+import com.example.point.functionpoints.activity.shitu.CameraActivity;
+import com.example.point.functionpoints.activity.shitu.ClockViewActivity;
 import com.example.point.functionpoints.activity.shitu.DialogUIActivity;
 import com.example.point.functionpoints.activity.shitu.PackRecycleWithSwipeActivity;
 import com.example.point.functionpoints.activity.shitu.PersonalCenterActivity;
 import com.example.point.functionpoints.activity.shitu.RecycleWithSwipeActivity;
 import com.example.point.functionpoints.activity.shitu.RecycleWithSwipeDragActivity;
 import com.example.point.functionpoints.activity.shitu.SelectContactsActivity;
+import com.example.point.functionpoints.activity.shitu.SlideMenuActivity;
 import com.example.point.functionpoints.activity.shitu.TablayoutStyleActivity;
 import com.example.point.functionpoints.activity.shitu.WeekCalendarActivity;
+import com.example.point.functionpoints.activity.shitu.barrage.MutiBarrageActivity;
+import com.example.point.functionpoints.activity.shitu.barrage.SingleBarrageActivity;
 import com.example.point.functionpoints.adapter.CommonRecycleAdapter;
 import com.example.point.functionpoints.adapter.ViewHolder;
 import com.example.point.functionpoints.model.ClassInfo;
@@ -64,6 +69,11 @@ public class ShiTuActivity extends Activity{
         strlist.add(new ClassInfo("可 上下右拖拽--左侧滑列表","可向上 向下移动，向右滑动删除，向左侧滑展示隐藏布局", RecycleWithSwipeDragActivity.class));
         strlist.add(new ClassInfo("周历","WeekCalendarActivity", WeekCalendarActivity.class));
         strlist.add(new ClassInfo("导航栏","多种样式的导航栏范例", TablayoutStyleActivity.class));
+        strlist.add(new ClassInfo("侧滑菜单栏","类似QQ主界面的侧滑菜单效果", SlideMenuActivity.class));
+        strlist.add(new ClassInfo("弹幕-相同风格","类似QQ控件弹幕", SingleBarrageActivity.class));
+        strlist.add(new ClassInfo("弹幕-不同风格","类似直播平台", MutiBarrageActivity.class));
+        strlist.add(new ClassInfo("钟表","View 绘制 - 自制View", ClockViewActivity.class));
+        strlist.add(new ClassInfo("相机","自定义相机 - 自制View", CameraActivity.class));
 
 
 

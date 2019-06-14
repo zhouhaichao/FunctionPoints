@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.example.point.functionpoints.MyApplication;
 import com.example.point.functionpoints.R;
 import com.squareup.leakcanary.RefWatcher;
@@ -34,12 +35,16 @@ public class TitleActivity extends Activity {
             ll_right = findViewById(R.id.ll_right);
             ll_left = findViewById(R.id.ll_left);
 
-            ll_left.setOnClickListener(new View.OnClickListener() {
+            if(ll_left!=null)
+                ll_left.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     finish();
                 }
             });
+            else{
+                ToastUtils.showShort("未发现标题栏");
+            }
 
         }
 
@@ -86,5 +91,11 @@ public class TitleActivity extends Activity {
         return this;
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(ll_left!=null){
+            ll_left.setOnClickListener(null);
+        }
+    }
 }

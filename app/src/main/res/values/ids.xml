@@ -3,4 +3,6 @@
 
     <item type="id" name="tag_class" />
     <item type="id" name="tag_view" />
+
+    <item name="barrage_view_holder" type="id"/>
 </resources>

@@ -1,12 +1,9 @@
 package com.example.point.functionpoints.retrofit_rxjava_okhttp;
 
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -34,6 +31,7 @@ public class RetrofitServiceManager {
                 .addHeaderParams("paltform","android")
                 .addHeaderParams("userToken","1234343434dfdfd3434")
                 .addHeaderParams("userId","123445")
+                .addHeaderParams("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:0.9.4)")
                 .build();
 
         // 创建Retrofit
